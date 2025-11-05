@@ -20,7 +20,7 @@ const Weather = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/weather?city=${encodeURIComponent(city)}`);
+      const res = await fetch(`https://infohub-peoject-backend.onrender.com/weather?city=${encodeURIComponent(city)}`);
       if (!res.ok) throw new Error();
       const json = await res.json();
       setData(json);
