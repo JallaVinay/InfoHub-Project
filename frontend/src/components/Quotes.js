@@ -10,7 +10,7 @@ const Quotes = () => {
     setError("");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/quote");
+      const res = await fetch("https://infohub-peoject-backend.onrender.com/quote");
       if (res.ok) {
         const data = await res.json();
         setQuote(data.quote);
