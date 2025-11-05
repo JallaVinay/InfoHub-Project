@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+nav{
+  z-index: 1;
+  position: fixed;  
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.quote-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+  padding: 20px;
+}
+
+.quote-container {
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+
+.quote {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  font: italic small-caps bold 20px/2 cursive;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInQuote 2s ease forwards;
+}
+
+.generate-btn {
+  margin-top: 10px;
+  padding: 10px 22px;
+}
+
+.error {
+  color: red;
+}
+
+/* Keyframes for quote animation */
+@keyframes fadeInQuote {
+  0% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+
+  .quote-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  
+  .quote {
+    font-size: 1rem;
+  }
+}
